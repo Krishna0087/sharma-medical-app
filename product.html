@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Product | Jay Bhavani Medical</title>
+
+  <meta name="description"
+        content="View product details at Jay Bhavani Medical.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div>
+          <strong>Jay Bhavani</strong>
+          <span>Medical</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+
+        <a href="products.html"
+           class="icon-btn"
+           aria-label="Back to products">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <a href="cart.html"
+           class="icon-btn"
+           aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">0</span>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- Main -->
+  <main>
+
+    <section class="product-detail-section">
+
+      <div class="container">
+
+        <a href="products.html" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to Products
+        </a>
+
+
+        <div id="productDetail" class="product-detail-layout">
+
+          <!-- Product Image -->
+          <div class="product-detail-image">
+
+            <div class="product-image-placeholder">
+              <i class="fa-solid fa-pills"></i>
+            </div>
+
+          </div>
+
+
+          <!-- Product Information -->
+          <div class="product-detail-info">
+
+            <span class="product-badge">
+              Healthcare Product
+            </span>
+
+            <h1 id="productName">
+              Product Name
+            </h1>
+
+            <p id="productDescription"
+               class="product-description">
+              Product description will appear here.
+            </p>
+
+
+            <!-- Price -->
+            <div class="product-price-box">
+
+              <span class="product-price"
+                    id="productPrice">
+                ₹0
+              </span>
+
+              <span class="product-mrp"
+                    id="productMrp">
+                MRP
+              </span>
+
+            </div>
+
+
+            <!-- Stock -->
+            <div class="stock-status"
+                 id="stockStatus">
+
+              <i class="fa-solid fa-circle-check"></i>
+
+              <span>
+                Available
+              </span>
+
+            </div>
+
+
+            <!-- Quantity -->
+            <div class="quantity-section">
+
+              <span class="quantity-label">
+                Quantity
+              </span>
+
+              <div class="quantity-control">
+
+                <button
+                  type="button"
+                  id="decreaseQty"
+                  aria-label="Decrease quantity">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+
+                <span id="quantity">
+                  1
+                </span>
+
+                <button
+                  type="button"
+                  id="increaseQty"
+                  aria-label="Increase quantity">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- Add Cart -->
+            <button
+              type="button"
+              id="addToCartBtn"
+              class="primary-btn add-cart-btn">
+
+              <i class="fa-solid fa-cart-plus"></i>
+
+              Add to Cart
+
+            </button>
+
+
+            <!-- Buy Now -->
+            <button
+              type="button"
+              id="buyNowBtn"
+              class="secondary-btn buy-now-btn">
+
+              Buy Now
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <!-- Safety Information -->
+            <div class="product-note">
+
+              <i class="fa-solid fa-circle-info"></i>
+
+              <p>
+                For prescription medicines, please consult
+                a qualified healthcare professional before use.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+
+    <a href="index.html">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+
+    <a href="products.html" class="active">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Shop</span>
+    </a>
+
+    <a href="cart.html">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Cart</span>
+    </a>
+
+    <a href="orders.html">
+      <i class="fa-solid fa-box"></i>
+      <span>Orders</span>
+    </a>
+
+    <a href="profile.html">
+      <i class="fa-solid fa-user"></i>
+      <span>Profile</span>
+    </a>
+
+  </nav>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-brand">
+
+        <div class="brand-icon">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div>
+          <strong>Jay Bhavani Medical</strong>
+          <p>Your health, our priority.</p>
+        </div>
+
+      </div>
+
+      <p class="footer-copy">
+        © 2026 Jay Bhavani Medical. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script src="js/app.js" type="module"></script>
+
+</body>
+</html>

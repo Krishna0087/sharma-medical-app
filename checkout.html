@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Checkout | Jay Bhavani Medical</title>
+
+  <meta name="description"
+        content="Complete your order from Jay Bhavani Medical.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div>
+          <strong>Jay Bhavani</strong>
+          <span>Medical</span>
+        </div>
+      </a>
+
+      <a href="cart.html"
+         class="icon-btn"
+         aria-label="Back to cart">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- Main -->
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+
+        <span class="eyebrow">CHECKOUT</span>
+
+        <h1>
+          Complete Your <span>Order</span>
+        </h1>
+
+        <p>
+          Enter your delivery details to place your order.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section class="checkout-section">
+      <div class="container">
+
+        <div class="checkout-layout">
+
+          <!-- Customer Details -->
+          <div class="checkout-form-card">
+
+            <div class="card-heading">
+              <div class="card-heading-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div>
+                <h2>Delivery Details</h2>
+                <p>Where should we deliver your order?</p>
+              </div>
+            </div>
+
+
+            <form id="checkoutForm">
+
+              <div class="form-group">
+
+                <label for="customerName">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="customerName"
+                  name="customerName"
+                  placeholder="Enter your full name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="customerPhone">
+                  Mobile Number
+                </label>
+
+                <input
+                  type="tel"
+                  id="customerPhone"
+                  name="customerPhone"
+                  placeholder="Enter 10-digit mobile number"
+                  inputmode="numeric"
+                  maxlength="10"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="customerAddress">
+                  Delivery Address
+                </label>
+
+                <textarea
+                  id="customerAddress"
+                  name="customerAddress"
+                  rows="4"
+                  placeholder="House no., street, area, city..."
+                  required
+                ></textarea>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="customerPincode">
+                  Pincode
+                </label>
+
+                <input
+                  type="text"
+                  id="customerPincode"
+                  name="customerPincode"
+                  placeholder="Enter 6-digit pincode"
+                  inputmode="numeric"
+                  maxlength="6"
+                  required
+                >
+
+              </div>
+
+
+              <!-- Payment -->
+              <div class="payment-section">
+
+                <div class="payment-title">
+                  <i class="fa-solid fa-wallet"></i>
+                  <span>Payment Method</span>
+                </div>
+
+
+                <label class="payment-option">
+
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="COD"
+                    checked
+                  >
+
+                  <div class="payment-content">
+
+                    <div class="payment-icon">
+                      <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+
+                    <div>
+                      <strong>Cash on Delivery</strong>
+                      <span>Pay when your order arrives</span>
+                    </div>
+
+                  </div>
+
+                </label>
+
+
+                <label class="payment-option disabled">
+
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="ONLINE"
+                    disabled
+                  >
+
+                  <div class="payment-content">
+
+                    <div class="payment-icon">
+                      <i class="fa-solid fa-credit-card"></i>
+                    </div>
+
+                    <div>
+                      <strong>Online Payment</strong>
+                      <span>Coming soon</span>
+                    </div>
+
+                  </div>
+
+                </label>
+
+              </div>
+
+
+              <button
+                type="submit"
+                class="primary-btn place-order-btn"
+              >
+                <i class="fa-solid fa-check"></i>
+                Place Order
+              </button>
+
+            </form>
+
+          </div>
+
+
+          <!-- Order Summary -->
+          <aside class="order-summary-card">
+
+            <div class="card-heading">
+
+              <div class="card-heading-icon">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+
+              <div>
+                <h2>Order Summary</h2>
+                <p>Your selected items</p>
+              </div>
+
+            </div>
+
+
+            <div id="checkoutItems">
+
+              <div class="summary-empty">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Your cart is empty.</p>
+              </div>
+
+            </div>
+
+
+            <div class="summary-total">
+
+              <div>
+                <span>Subtotal</span>
+                <strong id="checkoutSubtotal">₹0</strong>
+              </div>
+
+              <div>
+                <span>Delivery</span>
+                <strong id="checkoutDelivery">FREE</strong>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="grand-total">
+                <span>Total</span>
+                <strong id="checkoutTotal">₹0</strong>
+              </div>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+
+    <a href="index.html">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+
+    <a href="products.html">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Shop</span>
+    </a>
+
+    <a href="cart.html">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Cart</span>
+    </a>
+
+    <a href="orders.html">
+      <i class="fa-solid fa-box"></i>
+      <span>Orders</span>
+    </a>
+
+    <a href="profile.html">
+      <i class="fa-solid fa-user"></i>
+      <span>Profile</span>
+    </a>
+
+  </nav>
+
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-brand">
+
+        <div class="brand-icon">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div>
+          <strong>Jay Bhavani Medical</strong>
+          <p>Your health, our priority.</p>
+        </div>
+
+      </div>
+
+      <p class="footer-copy">
+        © 2026 Jay Bhavani Medical. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script src="js/app.js" type="module"></script>
+
+</body>
+</html>

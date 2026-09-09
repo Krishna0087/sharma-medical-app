@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Orders | Jay Bhavani Medical</title>
+
+  <meta name="description"
+        content="Track your orders from Jay Bhavani Medical.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand">
+
+        <div class="brand-icon">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div>
+          <strong>Jay Bhavani</strong>
+          <span>Medical</span>
+        </div>
+
+      </a>
+
+      <a href="products.html"
+         class="icon-btn"
+         aria-label="Shop">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- Main -->
+  <main>
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <span class="eyebrow">ORDER HISTORY</span>
+
+        <h1>
+          My <span>Orders</span>
+        </h1>
+
+        <p>
+          Track and manage your recent orders.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Orders -->
+    <section class="orders-section">
+
+      <div class="container">
+
+        <div id="ordersContainer">
+
+          <!-- Orders will be loaded from Firebase -->
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+
+            <h3>No orders yet</h3>
+
+            <p>
+              Your placed orders will appear here.
+            </p>
+
+            <a href="products.html" class="primary-btn">
+              <i class="fa-solid fa-bag-shopping"></i>
+              Start Shopping
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+
+    <a href="index.html">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+
+    <a href="products.html">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Shop</span>
+    </a>
+
+    <a href="cart.html">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Cart</span>
+    </a>
+
+    <a href="orders.html" class="active">
+      <i class="fa-solid fa-box"></i>
+      <span>Orders</span>
+    </a>
+
+    <a href="profile.html">
+      <i class="fa-solid fa-user"></i>
+      <span>Profile</span>
+    </a>
+
+  </nav>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-brand">
+
+        <div class="brand-icon">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div>
+          <strong>Jay Bhavani Medical</strong>
+          <p>Your health, our priority.</p>
+        </div>
+
+      </div>
+
+      <p class="footer-copy">
+        © 2026 Jay Bhavani Medical. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script src="js/app.js" type="module"></script>
+
+</body>
+</html>

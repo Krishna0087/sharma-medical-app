@@ -17,6 +17,7 @@ const searchInput = document.getElementById("productSearch");
 
 let allProducts = [];
 
+// Load products from Firebase
 async function loadProducts() {
   try {
     productsGrid.innerHTML = `
@@ -55,6 +56,7 @@ async function loadProducts() {
   }
 }
 
+// Display products
 function displayProducts(products) {
 
   if (!productsGrid) return;
@@ -80,10 +82,10 @@ function displayProducts(products) {
     const name = product.name || "Medical Product";
     const price = product.price || 0;
     const mrp = product.mrp || "";
-    const image = product.image || "https://placehold.co/400x400";
+    const image = product.image || "assets/images/product-placeholder.png";
     const category = product.category || "medicine";
     const description = product.description || "Quality healthcare product";
-    const stock = Number(product.stock || 0);
+    const stock = product.stock ?? 0;
 
     return `
       <article class="product-card">
@@ -92,6 +94,7 @@ function displayProducts(products) {
           <img
             src="${image}"
             alt="${name}"
+            onerror="this.src='assets/images/product-placeholder.png'"
           />
         </div>
 
@@ -108,6 +111,7 @@ function displayProducts(products) {
           </p>
 
           <div class="product-price">
+
             <strong>₹${price}</strong>
 
             ${
@@ -115,14 +119,17 @@ function displayProducts(products) {
                 ? `<span class="product-mrp">₹${mrp}</span>`
                 : ""
             }
+
           </div>
 
           <div class="product-stock">
+
             ${
               stock > 0
                 ? `<span class="in-stock">In Stock</span>`
                 : `<span class="out-stock">Out of Stock</span>`
             }
+
           </div>
 
           <button
@@ -145,6 +152,7 @@ function displayProducts(products) {
   }
 }
 
+// Search products
 if (searchInput) {
 
   searchInput.addEventListener("input", () => {
@@ -172,12 +180,16 @@ if (searchInput) {
     });
 
     displayProducts(filteredProducts);
+
   });
+
 }
 
+// Open product details
 window.openProduct = function (productId) {
   window.location.href =
     `product.html?id=${productId}`;
 };
 
+// Start
 loadProducts();
